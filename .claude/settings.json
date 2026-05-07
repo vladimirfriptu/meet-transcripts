@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/python:*)",
+      "Bash(PYTHONPATH=. .venv/bin/python ../test_absence_mapping.py)",
+      "Bash(just:*)",
+      "Bash(PYTHONPATH=. .venv/bin/python:*)",
+      "Bash(sed:*)",
+      "Bash(ls:*)",
+      "Bash(python -m mypy:*)",
+      "Bash(git log:*)",
+      "Bash(JUST_USE_DC=true just back-check:*)",
+      "Bash(JUST_USE_DC=true just back-test:*)",
+      "Bash(file:*)",
+      "Bash(ldd:*)",
+      "Bash(docker run:*)",
+      "Bash(nm:*)",
+      "Bash(xargs basename:*)",
+      "Bash(read f:*)",
+      "Bash(node:*)",
+      "Bash(uv sync:*)",
+      "Bash(uv pip:*)"
+    ]
+  }
+}
