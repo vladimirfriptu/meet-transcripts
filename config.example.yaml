@@ -1,0 +1,28 @@
+# Скопіюй цей файл як config.yaml і налаштуй під своє обладнання.
+# config.yaml не потрапляє в git — у кожного члена команди свій.
+
+# Пріоритет мікрофонів: скрипт бере перший доступний зверху вниз.
+# Вкажи підрядок з назви пристрою (регістр не важливий).
+# Переглянути назви: python -c "import sounddevice as sd; [print(d['name']) for d in sd.query_devices() if d['max_input_channels'] > 0]"
+mic_priority:
+  - AirPods
+  - BRIO 305
+  - MacBook Pro Microphone
+
+# Назва virtual loopback пристрою (зазвичай не треба міняти)
+blackhole_keyword: BlackHole
+
+# Модель для рантайму (meet_runtime.py). Варіанти: large-v3-turbo, large-v3, medium, small
+model: large-v3-turbo
+
+# Модель для постобробки (meet_transcribe.py). Повна модель — краще якість, але повільніше
+offline_model: openai/whisper-large-v3
+
+# int8 — швидко на M-series; float16 — точніше, більше памʼяті
+compute_type: int8
+
+# Розмір чанку в секундах (менше = швидша реакція, більше = кращий контекст)
+chunk_seconds: 6
+
+# Поріг тиші (0.003 — ігнорує тишу; збільш якщо багато шуму)
+silence_rms: 0.003

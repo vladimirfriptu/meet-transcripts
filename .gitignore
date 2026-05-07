@@ -148,6 +148,9 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
+# Personal config (team members use their own)
+config.yaml
+
 # Environments
 .env
 .envrc
